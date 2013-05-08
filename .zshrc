@@ -38,6 +38,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Add an alias for dotfiles
+alias dotfiles="subl ~/.dotfiles"
+
 # Make sure $PATH only contains unique values
 typeset -U path
 
