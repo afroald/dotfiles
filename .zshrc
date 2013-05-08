@@ -37,8 +37,18 @@ plugins=(brew cp extract git git-extras heroku node npm pow powder rails3 ruby t
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
-EDITOR='subl -w'
+# Make sure $PATH only contains unique values
+typeset -U path
 
+# Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
+POSTGRES_APP_BIN_PATH="/Applications/Postgres.app/Contents/MacOS/bin"
+if [ -d $POSTGRES_APP_BIN_PATH ] ; then
+    path=($POSTGRES_APP_BIN_PATH "$path[@]")
+fi
+
+# Sublime Text 2 is the best.
+EDITOR="subl -w"
+
+# Source rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
