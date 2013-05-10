@@ -44,6 +44,9 @@ alias dotfiles="subl ~/.dotfiles"
 # Make sure $PATH only contains unique values
 typeset -U path
 
+# Make sure Homebrew is before /usr/bin
+path=("/usr/local/bin" "$path[@]")
+
 # Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
 POSTGRES_APP_BIN_PATH="/Applications/Postgres.app/Contents/MacOS/bin"
 if [ -d $POSTGRES_APP_BIN_PATH ] ; then
