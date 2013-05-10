@@ -53,6 +53,12 @@ if [ -d $POSTGRES_APP_BIN_PATH ] ; then
     path=($POSTGRES_APP_BIN_PATH "$path[@]")
 fi
 
+# Add the NPM binaries dir to $PATH, if it exists
+NPM_BIN_PATH="/usr/local/share/npm/bin"
+if [ -d $NPM_BIN_PATH ] ; then
+    path=($NPM_BIN_PATH "$path[@]")
+fi
+
 # Sublime Text 2 is the best.
 EDITOR="subl -w"
 
