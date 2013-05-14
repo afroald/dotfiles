@@ -40,6 +40,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Add an alias for dotfiles
 alias dotfiles="subl ~/.dotfiles"
+# Add an alias for Hub
+alias git=hub
 
 # Make sure $PATH only contains unique values
 typeset -U path
