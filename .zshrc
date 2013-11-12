@@ -59,6 +59,7 @@ path=("/usr/local/bin" "$path[@]")
 EDITOR="subl -w"
 
 # Source rbenv!
+path=("$HOME/.rbenv/bin" "$path[@]")
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Source nvm
