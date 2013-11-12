@@ -1,0 +1,10 @@
+[user]
+	name = Roald Hacquebord
+	email = afroald@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/roald/.global_ignore
+	editor = subl -w
+[mergetool]
+	keepBackup = true
