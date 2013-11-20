@@ -47,10 +47,10 @@ alias git=hub
 typeset -U path
 
 # Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
-# POSTGRES_APP_BIN_PATH="/Applications/Postgres.app/Contents/MacOS/bin"
-# if [ -d $POSTGRES_APP_BIN_PATH ] ; then
-#     path=($POSTGRES_APP_BIN_PATH "$path[@]")
-# fi
+POSTGRES_APP_BIN_PATH="/Applications/Postgres93.app/Contents/MacOS/bin"
+if [ -d $POSTGRES_APP_BIN_PATH ] ; then
+    path=($POSTGRES_APP_BIN_PATH "$path[@]")
+fi
 
 # Make sure Homebrew is first
 path=("/usr/local/bin" "$path[@]")
