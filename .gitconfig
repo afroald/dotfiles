@@ -6,6 +6,10 @@
 [core]
 	excludesfile = /Users/roald/.global_ignore
 	editor = subl -w
+
+	# To prevent rebase problems on Mac OS X
+	# http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
+	trustctime = false
 [mergetool]
 	keepBackup = true
 	prompt = false
