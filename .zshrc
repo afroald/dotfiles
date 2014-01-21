@@ -63,7 +63,7 @@ path=("$HOME/.rbenv/bin" "$path[@]")
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Source nvm
-. ~/.nvm/nvm.sh
+source ~/.nvm/nvm.sh
 
 # Source syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
