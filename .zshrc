@@ -78,3 +78,6 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 
 # Alias a quick http server
 alias http="php -S localhost:3000"
+
+# Alias for ssh'ing my vps
+alias vps="ssh vps.roaldhacquebord.nl"
