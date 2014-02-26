@@ -43,27 +43,14 @@ alias dotfiles="subl ~/.dotfiles"
 # Add an alias for Hub
 alias git=hub
 
-# Make sure $PATH only contains unique values
-typeset -U path
-
 # Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
 POSTGRES_APP_BIN_PATH="/Applications/Postgres93.app/Contents/MacOS/bin"
 if [ -d $POSTGRES_APP_BIN_PATH ] ; then
     path=($POSTGRES_APP_BIN_PATH "$path[@]")
 fi
 
-# Make sure Homebrew is first
-path=("/usr/local/bin" "$path[@]")
-
 # Sublime Text 2 is the best.
 EDITOR="subl -w"
-
-# Source rbenv!
-path=("$HOME/.rbenv/bin" "$path[@]")
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# Source nvm
-source ~/.nvm/nvm.sh
 
 # Source syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -81,3 +68,7 @@ alias http="php -S localhost:3000"
 
 # Alias for ssh'ing my vps
 alias vps="ssh vps.roaldhacquebord.nl"
+
+# Load Android SDK
+path=("/Users/roald/Sites/adt-bundle-mac-x86_64-20131030/sdk/platform-tools" "$path[@]")
+path=("/Users/roald/Sites/adt-bundle-mac-x86_64-20131030/sdk/tools" "$path[@]")
