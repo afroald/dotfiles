@@ -68,7 +68,4 @@ alias http="php -S localhost:3000"
 
 # Alias for ssh'ing my vps
 alias vps="ssh vps.roaldhacquebord.nl"
-
-# Load Android SDK
-path=("/Users/roald/Sites/adt-bundle-mac-x86_64-20131030/sdk/platform-tools" "$path[@]")
-path=("/Users/roald/Sites/adt-bundle-mac-x86_64-20131030/sdk/tools" "$path[@]")
+alias raspberry="ssh 192.168.178.50"
