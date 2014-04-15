@@ -69,3 +69,6 @@ alias http="php -S localhost:3000"
 # Alias for ssh'ing my vps
 alias vps="ssh vps.roaldhacquebord.nl"
 alias raspberry="ssh 192.168.178.50"
+
+# Alias for fixing an isssue with IconServicesAgent
+alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
