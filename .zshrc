@@ -38,18 +38,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# Add an alias for dotfiles
-alias dotfiles="subl ~/.dotfiles"
-# Add an alias for Hub
-alias git=hub
-
 # Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
 POSTGRES_APP_BIN_PATH="/Applications/Postgres93.app/Contents/MacOS/bin"
 if [ -d $POSTGRES_APP_BIN_PATH ] ; then
     path=($POSTGRES_APP_BIN_PATH "$path[@]")
 fi
 
-# Sublime Text 2 is the best.
+# Sublime Text is the best.
 EDITOR="subl -w"
 
 # Source syntax highlighting
@@ -63,12 +58,22 @@ unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
+# Add an alias for dotfiles
+alias dotfiles="subl ~/.dotfiles"
+
+# Add an alias for Hub
+alias git=hub
+
 # Alias a quick http server
 alias http="php -S localhost:3000"
 
 # Alias for ssh'ing my vps
 alias vps="ssh vps.roaldhacquebord.nl"
-alias raspberry="ssh 192.168.178.50"
+alias raspberry="ssh home.roaldhacquebord.nl"
+alias pod="ssh pod.hetgroteavonturenblog.nl"
 
 # Alias for fixing an isssue with IconServicesAgent
 alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
+
+# Alias for unsafe Google Chrome
+alias unsafechrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -disable-web-security"
