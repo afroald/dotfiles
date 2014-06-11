@@ -3,6 +3,7 @@ typeset -U path
 
 # Make sure Homebrew is first
 path=("/usr/local/bin" "$path[@]")
+path=("/usr/local/sbin" "$path[@]")
 
 # Source nvm
 source ~/.nvm/nvm.sh
