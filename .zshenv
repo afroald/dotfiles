@@ -6,7 +6,8 @@ path=("/usr/local/bin" "$path[@]")
 path=("/usr/local/sbin" "$path[@]")
 
 # Source nvm
-source ~/.nvm/nvm.sh
+export NVM_DIR="/Users/roald/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Source rbenv!
 path=("$HOME/.rbenv/bin" "$path[@]")
