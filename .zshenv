@@ -12,3 +12,6 @@ export NVM_DIR="/Users/roald/.nvm"
 # Source rbenv!
 path=("$HOME/.rbenv/bin" "$path[@]")
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Add PHP to $PATH
+path=("$(brew --prefix homebrew/php/php54)/bin:$PATH" "$path[@]")
