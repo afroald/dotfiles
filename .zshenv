@@ -14,4 +14,4 @@ path=("$HOME/.rbenv/bin" "$path[@]")
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Add PHP to $PATH
-path=("$(brew --prefix homebrew/php/php54)/bin:$PATH" "$path[@]")
+path=("$(brew --prefix homebrew/php/php55)/bin:$PATH" "$path[@]")
