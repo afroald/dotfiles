@@ -1,6 +1,3 @@
-# Make sure $PATH only contains unique values
-typeset -U path
-
 # Make sure Homebrew is first
 path=("/usr/local/bin" "$path[@]")
 path=("/usr/local/sbin" "$path[@]")
@@ -10,8 +7,10 @@ export NVM_DIR="/Users/roald/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Source rbenv!
-path=("$HOME/.rbenv/bin" "$path[@]")
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Add PHP to $PATH
-path=("$(brew --prefix homebrew/php/php55)/bin:$PATH" "$path[@]")
+path=("$(brew --prefix homebrew/php/php55)/bin" "$path[@]")
+
+# Make sure $PATH only contains unique values
+typeset -U path
