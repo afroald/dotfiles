@@ -12,5 +12,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Add PHP to $PATH
 path=("$(brew --prefix homebrew/php/php55)/bin" "$path[@]")
 
+# Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
+POSTGRES_APP_BIN_PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin"
+if [ -d $POSTGRES_APP_BIN_PATH ] ; then
+    path=($POSTGRES_APP_BIN_PATH "$path[@]")
+fi
+
 # Make sure $PATH only contains unique values
 typeset -U path
