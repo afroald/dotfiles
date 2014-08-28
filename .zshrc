@@ -38,12 +38,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
-POSTGRES_APP_BIN_PATH="/Applications/Postgres93.app/Contents/MacOS/bin"
-if [ -d $POSTGRES_APP_BIN_PATH ] ; then
-    path=($POSTGRES_APP_BIN_PATH "$path[@]")
-fi
-
 # Sublime Text is the best.
 EDITOR="subl -w"
 
