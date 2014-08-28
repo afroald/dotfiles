@@ -10,7 +10,10 @@ export NVM_DIR="/Users/roald/.nvm"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Add PHP to $PATH
-path=("$(brew --prefix homebrew/php/php55)/bin" "$path[@]")
+PHP_BIN_PATH="$(brew --prefix homebrew/php/php55)/bin"
+if [ -d $PHP_BIN_PATH ] ; then
+  path=($PHP_BIN_PATH "$path[@]")
+fi
 
 # Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
 POSTGRES_APP_BIN_PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin"
