@@ -63,6 +63,7 @@ alias http="php -S localhost:3000"
 
 # Alias for ssh'ing my vps
 alias vps2="ssh vps2.roaldhacquebord.nl"
+alias gitlab="ssh gitlab.hacquebordbuckles.nl"
 
 # Alias for fixing an isssue with IconServicesAgent
 alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
