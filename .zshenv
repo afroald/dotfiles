@@ -3,8 +3,8 @@ path=("/usr/local/bin" "$path[@]")
 path=("/usr/local/sbin" "$path[@]")
 
 # Source nvm
-export NVM_DIR="/Users/roald/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Source rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
