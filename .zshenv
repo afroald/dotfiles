@@ -21,5 +21,8 @@ if [ -d $POSTGRES_APP_BIN_PATH ] ; then
     path=($POSTGRES_APP_BIN_PATH "$path[@]")
 fi
 
+# Add Composer binaries to $PATH
+path=(~/.composer/vendor/bin "$path[@]")
+
 # Make sure $PATH only contains unique values
 typeset -U path
