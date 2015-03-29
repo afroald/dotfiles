@@ -55,9 +55,6 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 # Add an alias for dotfiles
 alias dotfiles="subl ~/.dotfiles"
 
-# Add an alias for Hub
-alias git=hub
-
 # Alias a quick http server
 alias http="php -S localhost:3000"
 
