@@ -7,7 +7,7 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Source rbenv!
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 # Add PHP 5.6 to $PATH
 PHP56_BIN_PATH="$(brew --prefix homebrew/php/php56)/bin"
