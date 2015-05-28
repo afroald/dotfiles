@@ -63,3 +63,6 @@ alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
 
 # Alias to make Composer run on HHVM and ouput some more debug info
 alias composer="hhvm /usr/local/bin/composer --verbose --profile"
+
+# Alias to access my dev Vagrant box more quickly
+alias dev-server="cd ~/Projecten/dev-server && vagrant"
