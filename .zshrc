@@ -62,7 +62,7 @@ alias http="php -S localhost:3000"
 alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
 
 # Alias to make Composer run on HHVM and ouput some more debug info
-alias composer="hhvm /usr/local/bin/composer --verbose --profile"
+alias composer="composer --verbose --profile"
 
 # Alias to access my dev Vagrant box more quickly
 alias dev-server="cd ~/Projecten/dev-server && vagrant"
