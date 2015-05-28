@@ -61,5 +61,3 @@ alias http="php -S localhost:3000"
 # Alias for fixing an isssue with IconServicesAgent
 alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
 
-# Alias for unsafe Google Chrome
-alias unsafechrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -disable-web-security"
