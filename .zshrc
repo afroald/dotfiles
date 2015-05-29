@@ -65,4 +65,4 @@ alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
 alias composer="composer --verbose --profile"
 
 # Alias to access my dev Vagrant box more quickly
-alias dev-server="cd ~/Projecten/dev-server && vagrant"
+alias dev-server="VAGRANT_CWD=~/Projecten/dev-server vagrant"
