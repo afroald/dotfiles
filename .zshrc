@@ -58,9 +58,6 @@ alias dotfiles="subl ~/.dotfiles"
 # Alias a quick http server
 alias http="php -S localhost:3000"
 
-# Alias for fixing an isssue with IconServicesAgent
-alias fixisa="mkdir ${TMPDIR}/com.apple.IconServices"
-
 # Alias to make Composer run on HHVM and ouput some more debug info
 alias composer="composer --verbose --profile"
 
