@@ -62,4 +62,5 @@ alias http="php -S localhost:3000"
 alias composer="composer --verbose --profile"
 
 # Alias to access my dev Vagrant box more quickly
-alias dev-server="VAGRANT_CWD=~/Projecten/dev-server vagrant"
+alias dev-server="VAGRANT_CWD=~/Development/dev-server vagrant"
+
