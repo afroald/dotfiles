@@ -9,12 +9,6 @@ source $(brew --prefix nvm)/nvm.sh
 # Source rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
-# Add PHP 5.6 to $PATH
-PHP56_BIN_PATH="$(brew --prefix homebrew/php/php56)/bin"
-if [ -d $PHP56_BIN_PATH ] ; then
-  path=($PHP56_BIN_PATH "$path[@]")
-fi
-
 # Add Composer to $PATH
 COMPOSER_BIN_PATH=~/.composer/vendor/bin
 if [ -d $COMPOSER_BIN_PATH ] ; then
