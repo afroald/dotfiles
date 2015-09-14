@@ -46,3 +46,5 @@ alias dev-server="VAGRANT_CWD=~/Development/dev-server vagrant"
 
 # Caching problems are way annoying
 alias refresh-dns="sudo killall -HUP mDNSResponder"
+
+eval "$(thefuck --alias)"
