@@ -2,30 +2,19 @@
 source ~/.dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
-antigen bundle bower
-antigen bundle brew
-antigen bundle brew-cask
-antigen bundle bundler
-antigen bundle composer
-antigen bundle cp
 antigen bundle extract
 antigen bundle git
-antigen bundle npm
-antigen bundle nvm
 antigen bundle terminalapp
-antigen bundle vagrant
 
 antigen theme robbyrussell
 
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
 
 antigen apply
 
 # Sublime Text is the best.
 EDITOR="subl -w"
-
-# Source zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Load the online help
 unalias run-help
@@ -46,5 +35,3 @@ alias dev-server="VAGRANT_CWD=~/Development/dev-server vagrant"
 
 # Caching problems are way annoying
 alias refresh-dns="sudo killall -HUP mDNSResponder"
-
-eval "$(thefuck --alias)"
