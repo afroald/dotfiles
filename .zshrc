@@ -29,9 +29,7 @@ alias http="php -S localhost:3000"
 
 # Work shouldn't feel like work.
 alias dev="cd ~/Development"
-
-# Alias to access my dev Vagrant box more quickly
-alias dev-server="VAGRANT_CWD=~/Development/dev-server vagrant"
+alias dev-server="cd ~/Development/dev-server"
 
 # Caching problems are way annoying
 alias refresh-dns="sudo killall -HUP mDNSResponder"
