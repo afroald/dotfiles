@@ -33,3 +33,8 @@ alias dev-server="cd ~/Development/dev-server"
 
 # Caching problems are way annoying
 alias refresh-dns="sudo killall -HUP mDNSResponder"
+
+# Super top-secret stuff that has to stay out of this repo
+if [ -f ~/.dotfiles/secrets.zsh ]; then
+  source ~/.dotfiles/secrets.zsh
+fi
