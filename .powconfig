@@ -1,5 +1,0 @@
-# Make sure Pow uses rbenv's Ruby
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-
-# Reduce the timeout a bit. I don't care for idling workers.
-export POW_TIMEOUT=300
