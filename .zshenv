@@ -1,6 +1,6 @@
 # Make sure Homebrew is first
-path=("/usr/local/bin" "$path[@]")
 path=("/usr/local/sbin" "$path[@]")
+path=("/usr/local/bin" "$path[@]")
 
 # Source nvm
 export NVM_DIR=~/.nvm
