@@ -8,7 +8,6 @@ antigen bundle terminalapp
 
 antigen theme robbyrussell
 
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 
 antigen apply
@@ -38,3 +37,5 @@ alias refresh-dns="sudo killall -HUP mDNSResponder"
 if [ -f ~/.dotfiles/secrets.zsh ]; then
   source ~/.dotfiles/secrets.zsh
 fi
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
