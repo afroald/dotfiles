@@ -9,17 +9,6 @@ source $(brew --prefix nvm)/nvm.sh
 # Source rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
-# Add Composer to $PATH
-COMPOSER_BIN_PATH=~/.composer/vendor/bin
-if [ -d $COMPOSER_BIN_PATH ] ; then
-  path=($COMPOSER_BIN_PATH "$path[@]")
-fi
-
-# Add the postgresql binaries from Postgres.app to $PATH, if the app is installed
-POSTGRES_APP_BIN_PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin"
-if [ -d $POSTGRES_APP_BIN_PATH ] ; then
-    path=($POSTGRES_APP_BIN_PATH "$path[@]")
-fi
 
 # Make sure $PATH only contains unique values
 typeset -U path
