@@ -28,6 +28,9 @@ alias http="php -S localhost:3000"
 # Work shouldn't feel like work.
 alias dev="cd ~/Development"
 alias dev-server="cd ~/Development/dev-server"
+alias hqbk="cd ~/Development/hqbk"
+alias wttv="cd ~/Development/wttv/welcometothevillage.nl"
+alias svava="cd ~/Development/hqbk/svavaband.nl"
 
 # Caching problems are way annoying
 alias refresh-dns="sudo killall -HUP mDNSResponder"
