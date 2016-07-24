@@ -2,13 +2,12 @@
 source ~/.dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
-antigen bundle extract
-antigen bundle git
-antigen bundle terminalapp
+# antigen bundle extract
+# antigen bundle git
+# antigen bundle terminalapp
+antigen bundle zsh-users/zsh-completions
 
 antigen theme robbyrussell
-
-antigen bundle zsh-users/zsh-completions
 
 antigen apply
 
@@ -16,9 +15,9 @@ antigen apply
 EDITOR="subl -w"
 
 # Load the online help
-unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/helpfiles
+# unalias run-help
+# autoload run-help
+# HELPDIR=/usr/local/share/zsh/helpfiles
 
 # Add an alias for dotfiles
 alias dotfiles="subl ~/.dotfiles"
