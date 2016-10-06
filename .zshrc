@@ -11,13 +11,10 @@ antigen theme robbyrussell
 
 antigen apply
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Sublime Text is the best.
 EDITOR="subl -w"
-
-# Load the online help
-# unalias run-help
-# autoload run-help
-# HELPDIR=/usr/local/share/zsh/helpfiles
 
 # Add an alias for dotfiles
 alias dotfiles="cd ~/.dotfiles"
@@ -42,11 +39,9 @@ function dev-server() {
 }
 
 # Caching problems are way annoying
-alias refresh-dns="sudo killall -HUP mDNSResponder"
+alias clear-dns-cache="sudo killall -HUP mDNSResponder"
 
 # Super top-secret stuff that has to stay out of this repo
 if [ -f ~/.dotfiles/secrets.zsh ]; then
   source ~/.dotfiles/secrets.zsh
 fi
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
