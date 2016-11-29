@@ -4,7 +4,7 @@ path=("/usr/local/bin" "$path[@]")
 
 # Source nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Source rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
