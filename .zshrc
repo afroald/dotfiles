@@ -2,9 +2,7 @@
 source ~/.dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
-# antigen bundle extract
-# antigen bundle git
-# antigen bundle terminalapp
+antigen bundle terminalapp
 antigen bundle zsh-users/zsh-completions
 
 antigen theme robbyrussell
