@@ -12,7 +12,7 @@ antigen apply
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Sublime Text is the best.
-EDITOR="subl -w"
+export EDITOR="subl -w"
 
 # Add an alias for dotfiles
 alias dotfiles="cd ~/.dotfiles"
@@ -27,3 +27,5 @@ alias clear-dns-cache="sudo killall -HUP mDNSResponder"
 if [ -f ~/.dotfiles/secrets.zsh ]; then
   source ~/.dotfiles/secrets.zsh
 fi
+
+source ~/.dotfiles/convert-webfont.sh
