@@ -2,6 +2,8 @@
 path=("/usr/local/sbin" "$path[@]")
 path=("/usr/local/bin" "$path[@]")
 
+export LANG="nl_NL.UTF-8"
+
 # Source nvm
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
