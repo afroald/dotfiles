@@ -29,3 +29,8 @@ if [ -f ~/.dotfiles/secrets.zsh ]; then
 fi
 
 source ~/.dotfiles/convert-webfont.sh
+
+# Optimizing my shell game
+alias ll="ls -l"
+alias lla="ls -la"
+
