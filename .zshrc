@@ -11,6 +11,9 @@ antigen apply
 autoload -U promptinit; promptinit
 prompt pure
 
+# Other possible very nice prompt:
+# https://github.com/tylerreckart/odin
+
 # Sublime Text is the best.
 export EDITOR="subl -w"
 
