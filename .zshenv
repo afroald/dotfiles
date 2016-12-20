@@ -2,6 +2,8 @@
 path=("/usr/local/sbin" "$path[@]")
 path=("/usr/local/bin" "$path[@]")
 
+fpath=( "$HOME/.dotfiles/zfunctions" $fpath )
+
 export LANG="nl_NL.UTF-8"
 
 # Source nvm
