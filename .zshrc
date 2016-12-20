@@ -1,15 +1,15 @@
 # Load antigen
-source ~/.dotfiles/antigen/antigen.zsh
-antigen use oh-my-zsh
+source "$HOME/.dotfiles/antigen/antigen.zsh"
 
 antigen bundle terminalapp
 antigen bundle zsh-users/zsh-completions
-
-antigen theme robbyrussell
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Set prompt
+autoload -U promptinit; promptinit
+prompt pure
 
 # Sublime Text is the best.
 export EDITOR="subl -w"
@@ -25,7 +25,7 @@ alias clear-dns-cache="sudo killall -HUP mDNSResponder"
 
 # Super top-secret stuff that has to stay out of this repo
 if [ -f ~/.dotfiles/secrets.zsh ]; then
-  source ~/.dotfiles/secrets.zsh
+  . ~/.dotfiles/secrets.zsh
 fi
 
 source ~/.dotfiles/convert-webfont.sh
