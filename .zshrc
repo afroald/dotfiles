@@ -1,7 +1,7 @@
 # Load antigen
 source "$HOME/.dotfiles/antigen/antigen.zsh"
 
-antigen bundle terminalapp
+# antigen bundle terminalapp
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
