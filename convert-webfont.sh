@@ -1,6 +1,9 @@
 #!/bin/bash
 
 function convert-webfont() {
-  sfnt2woff-zopfli "$1"
-  woff2_compress "$1"
+  for FILE in "$@"
+  do
+    sfnt2woff-zopfli "$FILE"
+    woff2_compress "$FILE"
+  done
 }
