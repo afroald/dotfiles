@@ -6,10 +6,6 @@ fpath=( "$HOME/.dotfiles/zfunctions" $fpath )
 
 export LANG="nl_NL.UTF-8"
 
-# Source nvm
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # Source rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
