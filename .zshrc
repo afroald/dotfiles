@@ -5,14 +5,10 @@ source "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
 antigen apply
-
-# Set prompt
-autoload -U promptinit; promptinit
-prompt pure
-
-# Other possible very nice prompt:
-# https://github.com/tylerreckart/odin
 
 # Sublime Text is the best.
 export EDITOR="subl -w"
@@ -36,4 +32,3 @@ source ~/.dotfiles/convert-webfont.sh
 # Optimizing my shell game
 alias ll="ls -l"
 alias lla="ls -la"
-
