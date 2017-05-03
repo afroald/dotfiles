@@ -1,15 +1,7 @@
 # Load antigen
 # shellcheck source=/dev/null
 . "$HOME/.dotfiles/antigen/antigen.zsh"
-
-# antigen bundle terminalapp
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
-
-antigen apply
+antigen init "$HOME/.dotfiles/.antigenrc"
 
 # Sublime Text is the best.
 export EDITOR="subl -w"
