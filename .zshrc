@@ -1,5 +1,6 @@
 # Load antigen
-source "$HOME/.dotfiles/antigen/antigen.zsh"
+# shellcheck source=/dev/null
+. "$HOME/.dotfiles/antigen/antigen.zsh"
 
 # antigen bundle terminalapp
 antigen bundle zsh-users/zsh-completions
@@ -24,10 +25,12 @@ alias clear-dns-cache="sudo killall -HUP mDNSResponder"
 
 # Super top-secret stuff that has to stay out of this repo
 if [ -f ~/.dotfiles/secrets.zsh ]; then
+  # shellcheck source=secrets.zsh
   . ~/.dotfiles/secrets.zsh
 fi
 
-source ~/.dotfiles/convert-webfont.sh
+#shellcheck source=convert-webfont.sh
+. "$HOME/.dotfiles/convert-webfont.sh"
 
 # Optimizing my shell game
 alias ll="ls -l"
