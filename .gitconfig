@@ -6,26 +6,11 @@
 [core]
 	excludesfile = /Users/roald/.global_ignore
 	editor = subl -w
-	ignorecase=false
+	ignorecase = false
 
 	# To prevent rebase problems on Mac OS X
 	# http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
 	trustctime = false
-	pager = diff-so-fancy | less --tabs=1,5 -R
-[mergetool]
-	keepBackup = true
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
-	tool = Kaleidoscope
 [push]
 	default = simple
 [alias]
