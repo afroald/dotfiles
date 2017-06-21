@@ -13,5 +13,8 @@ if [ -d $COMPOSER_BIN_PATH ] ; then
   path=($COMPOSER_BIN_PATH "$path[@]")
 fi
 
+# Source z
+ . /usr/local/etc/profile.d/z.sh
+
 # Make sure $PATH only contains unique values
 typeset -U path
