@@ -5,7 +5,6 @@
 	ui = true
 [core]
 	excludesfile = /Users/roald/.global_ignore
-	editor = subl -w
 	ignorecase = false
 
 	# To prevent rebase problems on Mac OS X
