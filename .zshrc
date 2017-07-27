@@ -27,3 +27,4 @@ fi
 # Optimizing my shell game
 alias ll="ls -l"
 alias lla="ls -la"
+alias current-branch="git rev-parse --abbrev-ref HEAD"
