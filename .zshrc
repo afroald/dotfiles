@@ -3,9 +3,6 @@
 . "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen init "$HOME/.dotfiles/.antigenrc"
 
-# Sublime Text is the best.
-export EDITOR="subl -w"
-
 # Add an alias for dotfiles
 alias dotfiles="cd ~/.dotfiles"
 
