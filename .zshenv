@@ -14,7 +14,7 @@ if [ -d $COMPOSER_BIN_PATH ] ; then
 fi
 
 # Source z
- . /usr/local/etc/profile.d/z.sh
+. /usr/local/etc/profile.d/z.sh
 
 # Make sure $PATH only contains unique values
 typeset -U path
