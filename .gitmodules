@@ -1,6 +1,6 @@
 [submodule "antigen"]
 	path = antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule "pure"]
-	path = pure
-	url = git@github.com:sindresorhus/pure.git
+[submodule "nvm"]
+	path = nvm
+	url = https://github.com/creationix/nvm.git
