@@ -98,6 +98,10 @@ module.exports = {
     windowSize: [1065, 620],
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    hypercwd: {
+      initialWorkingDirectory: '~'
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -106,7 +110,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-vibrant', 'hypercwd'],
+  plugins: ['hyper-vibrant', 'hypercwd', 'hyperpower', 'space-pull', 'gitrocket'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
