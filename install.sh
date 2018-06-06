@@ -1,10 +1,12 @@
 #!/bin/sh
 
-cd "$HOME"
-ln -s .dotfiles/.gitconfig .gitconfig
-ln -s .dotfiles/.global_ignore .global_ignore
-ln -s .dotfiles/.hyper.js .hyper.js
-ln -s .dotfiles/.nanorc .nanorc
-ln -s .dotfiles/.zshenv .zshenv
-ln -s .dotfiles/.zshrc .zshrc
+set -e
 
+cd "$HOME"
+
+ln -sf .dotfiles/.gitconfig .gitconfig
+ln -sf .dotfiles/.global_ignore .global_ignore
+ln -sf .dotfiles/.hyper.js .hyper.js
+ln -sf .dotfiles/.nanorc .nanorc
+ln -sf .dotfiles/.zshenv .zshenv
+ln -sf .dotfiles/.zshrc .zshrc
