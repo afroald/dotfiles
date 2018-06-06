@@ -11,11 +11,9 @@ alias clear-dns-cache="sudo killall -HUP mDNSResponder"
 
 # Super top-secret stuff that has to stay out of this repo
 if [ -f ~/.dotfiles/secrets.zsh ]; then
-  # shellcheck source=secrets.zsh
   . ~/.dotfiles/secrets.zsh
 fi
 
-#shellcheck source=convert-webfont.sh
 . "$HOME/.dotfiles/convert-webfont.sh"
 
 # Optimizing my shell game
