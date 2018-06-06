@@ -33,11 +33,11 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
         return 0
     }
     # nvm_resolve_local_alias can also be slow; cache it.
-    if [ -s "$NVM_DIR/_default_version" ]; then
-        NVM_AUTO_LOAD_VERSION=$(cat "$NVM_DIR/_default_version")
+    if [ -s "$HOME/.dotfiles/_nvm_default_version" ]; then
+        NVM_AUTO_LOAD_VERSION=$(cat "$HOME/.dotfiles/_nvm_default_version")
     else
         NVM_AUTO_LOAD_VERSION=$(nvm_resolve_local_alias default)
-        echo "$NVM_AUTO_LOAD_VERSION" > "$NVM_DIR/_default_version"
+        echo "$NVM_AUTO_LOAD_VERSION" > "$HOME/.dotfiles/_nvm_default_version"
     fi
     nvm use --silent "$NVM_AUTO_LOAD_VERSION"
 fi
