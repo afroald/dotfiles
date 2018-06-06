@@ -13,9 +13,6 @@ if [ -d $COMPOSER_BIN_PATH ] ; then
   path=("$COMPOSER_BIN_PATH" "${path[@]}")
 fi
 
-# Add Python to path
-path=(~/Library/Python/3.6/bin "${path[@]}")
-
 # Load nvm if present
 export NVM_DIR="$HOME/.dotfiles/nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
@@ -40,3 +37,9 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
     fi
     nvm use --silent "$NVM_AUTO_LOAD_VERSION"
 fi
+
+# Add Python to path
+path=(~/Library/Python/3.6/bin "${path[@]}")
+
+# Add Holman's scripts to path
+path=(~/.dotfiles/holman/bin "${path[@]}")
