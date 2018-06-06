@@ -1,7 +1,6 @@
 export LANG="nl_NL.UTF-8"
 
 # Load antigen
-# shellcheck source=/dev/null
 . "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen init "$HOME/.dotfiles/.antigenrc"
 
