@@ -43,3 +43,6 @@ path=(~/Library/Python/3.6/bin "${path[@]}")
 
 # Add Holman's scripts to path
 path=(~/.dotfiles/holman/bin "${path[@]}")
+
+# Add sqlite to path
+path=($(brew --prefix sqlite)/bin "${path[@]}")
