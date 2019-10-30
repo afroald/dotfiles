@@ -1,7 +1,8 @@
 export LANG="nl_NL.UTF-8"
 
 # Load antigen
-. "$HOME/.dotfiles/antigen/antigen.zsh"
+# shellcheck source=antigen/antigen.zsh
+source "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen init "$HOME/.dotfiles/.antigenrc"
 
 # Source rbenv!
@@ -20,19 +21,20 @@ path=("/usr/local/opt/python/libexec/bin" "${path[@]}")
 path=(~/.dotfiles/holman/bin "${path[@]}")
 
 # Add sqlite to path
-path=($(brew --prefix sqlite)/bin "${path[@]}")
+path=("$(brew --prefix sqlite)/bin" "${path[@]}")
 
 NODE_VENV_DIR=~/.nodeenvs
 
+# shellcheck disable=SC2120
 node-venv() {
   CWD="$(pwd)"
-  cd "$NODE_VENV_DIR"
+  cd "$NODE_VENV_DIR" || return
   versions=($(ls "$NODE_VENV_DIR"))
 
   [ "$1" ] && env="$1" || env="${versions[-1]}"
   source "$env/bin/activate"
 
-  cd "$CWD"
+  cd "$CWD" || return
 }
 
 _node-venv() {
