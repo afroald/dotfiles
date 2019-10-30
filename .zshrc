@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Add an alias for dotfiles
 alias dotfiles="cd ~/.dotfiles"
 
@@ -20,3 +18,14 @@ fi
 alias ll="ls -l"
 alias lla="ls -la"
 alias current-branch="git rev-parse --abbrev-ref HEAD"
+
+function fix-macos-zsh-config() {
+  echo "Patching default prompt in /etc/zshrc"
+  sudo sed -i .original "s/^PS1=/# PS1=/" /etc/zshrc
+
+  if [ -f /etc/zprofile ];
+  then
+    echo "Moving /etc/zprofile to /etc/zshenv"
+    sudo mv /etc/zprofile /etc/zshenv
+  fi
+}
