@@ -20,9 +20,6 @@ path=("/usr/local/opt/python/libexec/bin" "${path[@]}")
 # Add Holman's scripts to path
 path=(~/.dotfiles/holman/bin "${path[@]}")
 
-# Add sqlite to path
-path=("$(brew --prefix sqlite)/bin" "${path[@]}")
-
 NODE_VENV_DIR=~/.nodeenvs
 
 # shellcheck disable=SC2120
