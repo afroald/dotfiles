@@ -6,7 +6,9 @@ source "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen init "$HOME/.dotfiles/.antigenrc"
 
 # Source rbenv!
-if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
+if type rbenv > /dev/null; then
+  eval "$(rbenv init - --no-rehash)"
+fi
 
 # Add Composer to path
 COMPOSER_BIN_PATH=~/.composer/vendor/bin
@@ -20,24 +22,26 @@ path=("/usr/local/opt/python/libexec/bin" "${path[@]}")
 # Add Holman's scripts to path
 path=(~/.dotfiles/holman/bin "${path[@]}")
 
-NODE_VENV_DIR=~/.nodeenvs
+if type nodeenv > /dev/null; then
+  NODE_VENV_DIR=~/.nodeenvs
 
-# shellcheck disable=SC2120
-node-venv() {
-  CWD="$(pwd)"
-  cd "$NODE_VENV_DIR" || return
-  versions=($(ls "$NODE_VENV_DIR"))
+  # shellcheck disable=SC2120
+  node-venv() {
+    CWD="$(pwd)"
+    cd "$NODE_VENV_DIR" || return
+    versions=($(ls "$NODE_VENV_DIR"))
 
-  [ "$1" ] && env="$1" || env="${versions[-1]}"
-  source "$env/bin/activate"
+    [ "$1" ] && env="$1" || env="${versions[-1]}"
+    source "$env/bin/activate"
 
-  cd "$CWD" || return
-}
+    cd "$CWD" || return
+  }
 
-_node-venv() {
-  reply=($(ls "$NODE_VENV_DIR"))
-}
+  _node-venv() {
+    reply=($(ls "$NODE_VENV_DIR"))
+  }
 
-compctl -K _node-venv node-venv
+  compctl -K _node-venv node-venv
 
-node-venv
+  node-venv
+fi
