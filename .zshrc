@@ -29,3 +29,7 @@ function fix-macos-zsh-config() {
     sudo mv /etc/zprofile /etc/zshenv
   fi
 }
+
+if type thefuck > /dev/null; then
+  eval "$(thefuck --alias)"
+fi
