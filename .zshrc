@@ -12,7 +12,9 @@ if [ -f ~/.dotfiles/secrets.zsh ]; then
   . ~/.dotfiles/secrets.zsh
 fi
 
-. "$HOME/.dotfiles/convert-webfont.sh"
+# Nifty stuff
+source "$HOME/.dotfiles/convert-webfont.sh"
+source "$HOME/.dotfiles/holman/functions/extract"
 
 # Optimizing my shell game
 alias ll="ls -l"
