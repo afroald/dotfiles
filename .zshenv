@@ -8,6 +8,8 @@ antigen init "$HOME/.dotfiles/.antigenrc"
 # Source rbenv!
 if type rbenv > /dev/null; then
   eval "$(rbenv init - --no-rehash)"
+  RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+  export RUBY_CONFIGURE_OPTS
 fi
 
 # Add Composer to path
