@@ -35,3 +35,5 @@ function fix-macos-zsh-config() {
 if type thefuck > /dev/null; then
   eval "$(thefuck --alias)"
 fi
+
+export PURE_PROMPT_SYMBOL="(づ￣ ³￣)づ"
