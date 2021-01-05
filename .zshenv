@@ -5,6 +5,9 @@ export LANG="nl_NL.UTF-8"
 source "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen init "$HOME/.dotfiles/.antigenrc"
 
+# Add user binaries to path
+path=(~/.local/bin "${path[@]}")
+
 # Source rbenv!
 if type rbenv > /dev/null; then
   eval "$(rbenv init - --no-rehash)"
