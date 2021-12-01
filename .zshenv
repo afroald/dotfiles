@@ -22,10 +22,10 @@ if [ -d $COMPOSER_BIN_PATH ] ; then
 fi
 
 # Add Python to path
-path=("/usr/local/opt/python/libexec/bin" "${path[@]}")
-
-# Add Holman's scripts to path
-path=(~/.dotfiles/holman/bin "${path[@]}")
+PYTHON_BIN_PATH=/usr/local/opt/python@3.9/libexec/bin
+if [ -d $PYTHON_BIN_PATH ] ; then
+  path=("$PYTHON_BIN_PATH" "${path[@]}")
+fi
 
 if type nodeenv > /dev/null; then
   NODE_VENV_DIR=~/.nodeenvs
