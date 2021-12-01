@@ -25,6 +25,3 @@ Maak symlinks van homedirectory naar repo:
 `~/.dotfiles/install.sh`
 
 ### Stap 3: Open nieuwe shell
-
-## Inspiratie:
-- https://github.com/holman/dotfiles

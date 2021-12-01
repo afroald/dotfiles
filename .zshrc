@@ -14,7 +14,6 @@ fi
 
 # Nifty stuff
 source "$HOME/.dotfiles/convert-webfont.sh"
-source "$HOME/.dotfiles/holman/functions/extract"
 
 # Optimizing my shell game
 alias ll="ls -l"
