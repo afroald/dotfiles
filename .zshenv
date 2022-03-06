@@ -50,3 +50,7 @@ if type nodeenv > /dev/null; then
 
   node-venv
 fi
+
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
