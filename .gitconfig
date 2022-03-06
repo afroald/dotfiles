@@ -1,6 +1,7 @@
 [user]
 	name = Roald Hacquebord
 	email = roald@zielma.kr
+	signingkey = 4DD2950F
 [color]
 	ui = true
 [core]
