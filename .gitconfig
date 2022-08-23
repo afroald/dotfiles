@@ -28,3 +28,6 @@
 	ff = only
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:~/Development/nos/"]
+    path = ~/Development/nos/.gitconfig
