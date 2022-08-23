@@ -16,8 +16,9 @@ fi
 source "$HOME/.dotfiles/convert-webfont.sh"
 
 # Optimizing my shell game
-alias ll="ls -l"
-alias lla="ls -la"
+alias ls="exa"
+alias ll="exa -l"
+alias lla="exa -la"
 alias current-branch="git rev-parse --abbrev-ref HEAD"
 
 function fix-macos-zsh-config() {
