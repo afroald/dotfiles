@@ -27,6 +27,20 @@ if [ -d $PYTHON_BIN_PATH ] ; then
   path=("$PYTHON_BIN_PATH" "${path[@]}")
 fi
 
+PYTHON_USER_BIN_PATH=~/Library/Python/3.9/bin
+if [ -d $PYTHON_USER_BIN_PATH ] ; then
+  path=("$PYTHON_USER_BIN_PATH" "${path[@]}")
+fi
+
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
+
+OPENJDK_BIN_PATH=/usr/local/opt/openjdk/bin
+if [ -d $OPENJDK_BIN_PATH ]; then
+  path=($OPENJDK_BIN_PATH "${path[@]}")
+fi
+
 if type nodeenv > /dev/null; then
   NODE_VENV_DIR=~/.nodeenvs
 
@@ -49,8 +63,4 @@ if type nodeenv > /dev/null; then
   compctl -K _node-venv node-venv
 
   node-venv
-fi
-
-if [ -f "$HOME/.cargo/env" ]; then
-  . "$HOME/.cargo/env"
 fi
