@@ -1,5 +1,8 @@
 export LANG="nl_NL.UTF-8"
 
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Load antigen
 # shellcheck source=antigen/antigen.zsh
 source "$HOME/.dotfiles/antigen/antigen.zsh"
