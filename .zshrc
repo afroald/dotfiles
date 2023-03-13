@@ -21,6 +21,11 @@ alias ll="exa -l"
 alias lla="exa -la"
 alias current-branch="git rev-parse --abbrev-ref HEAD"
 
+# k8s stuff
+alias k="kubectl"
+alias kns="kubens"
+alias kctx="kubectx"
+
 function fix-macos-zsh-config() {
   echo "Patching default prompt in /etc/zshrc"
   sudo sed -i .original "s/^PS1=/# PS1=/" /etc/zshrc
