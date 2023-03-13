@@ -56,3 +56,8 @@ function awsall {
   done
   trap "break" INT TERM
 }
+
+# just trying it out for now
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
