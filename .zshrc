@@ -37,12 +37,7 @@ function fix-macos-zsh-config() {
   fi
 }
 
-if type thefuck > /dev/null; then
-  eval "$(thefuck --alias)"
-fi
-
 export PURE_PROMPT_SYMBOL="(づ￣ ³￣)づ"
-
 
 function awsall {
   export AWS_PAGER=""
