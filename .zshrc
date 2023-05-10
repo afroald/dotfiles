@@ -61,3 +61,7 @@ function awsall {
 function node-sh() {
   docker run --rm -it -v "$(pwd):/app" -w /app "node:${1:-latest}" bash
 }
+
+function php-sh() {
+  docker run --rm -it -v "$(pwd):/app" -w /app "composer:${1:-latest}" bash
+}
