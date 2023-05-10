@@ -24,22 +24,6 @@ if [ -d $COMPOSER_BIN_PATH ] ; then
   path=("$COMPOSER_BIN_PATH" "${path[@]}")
 fi
 
-# Add Python to path
-PYTHON_BIN_PATH=/usr/local/opt/python@3.9/libexec/bin
-if [ -d $PYTHON_BIN_PATH ] ; then
-  path=("$PYTHON_BIN_PATH" "${path[@]}")
-fi
-
-PYTHON_USER_BIN_PATH=~/Library/Python/3.9/bin
-if [ -d $PYTHON_USER_BIN_PATH ] ; then
-  path=("$PYTHON_USER_BIN_PATH" "${path[@]}")
-fi
-
 if [ -f "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
-fi
-
-OPENJDK_BIN_PATH=/usr/local/opt/openjdk/bin
-if [ -d $OPENJDK_BIN_PATH ]; then
-  path=($OPENJDK_BIN_PATH "${path[@]}")
 fi
