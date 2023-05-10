@@ -58,6 +58,10 @@ function awsall {
   trap "break" INT TERM
 }
 
+function node-sh() {
+  docker run --rm -it -v "$(pwd):/app" -w /app "node:${1:-latest}" bash
+}
+
 # just trying it out for now
 export VISUAL=nvim
 export EDITOR="$VISUAL"

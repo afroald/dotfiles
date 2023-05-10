@@ -43,27 +43,3 @@ OPENJDK_BIN_PATH=/usr/local/opt/openjdk/bin
 if [ -d $OPENJDK_BIN_PATH ]; then
   path=($OPENJDK_BIN_PATH "${path[@]}")
 fi
-
-if type nodeenv > /dev/null; then
-  NODE_VENV_DIR=~/.nodeenvs
-
-  # shellcheck disable=SC2120
-  node-venv() {
-    CWD="$(pwd)"
-    cd "$NODE_VENV_DIR" || return
-    versions=($(ls "$NODE_VENV_DIR"))
-
-    [ "$1" ] && env="$1" || env="${versions[-1]}"
-    source "$env/bin/activate"
-
-    cd "$CWD" || return
-  }
-
-  _node-venv() {
-    reply=($(ls "$NODE_VENV_DIR"))
-  }
-
-  compctl -K _node-venv node-venv
-
-  node-venv
-fi
