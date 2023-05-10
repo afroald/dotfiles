@@ -27,3 +27,7 @@ fi
 if [ -f "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
 fi
+
+# Set nvim as default editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
