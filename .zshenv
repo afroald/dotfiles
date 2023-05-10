@@ -11,19 +11,7 @@ antigen init "$HOME/.dotfiles/.antigenrc"
 # Add user binaries to path
 path=(~/.local/bin "${path[@]}")
 
-# Source rbenv!
-if type rbenv > /dev/null; then
-  eval "$(rbenv init - --no-rehash)"
-  RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-  export RUBY_CONFIGURE_OPTS
-fi
-
-# Add Composer to path
-COMPOSER_BIN_PATH=~/.composer/vendor/bin
-if [ -d $COMPOSER_BIN_PATH ] ; then
-  path=("$COMPOSER_BIN_PATH" "${path[@]}")
-fi
-
+# Add binaries installed by cargo to path
 if [ -f "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
 fi
