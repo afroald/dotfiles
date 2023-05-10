@@ -25,6 +25,7 @@ alias current-branch="git rev-parse --abbrev-ref HEAD"
 alias k="kubectl"
 alias kns="kubens"
 alias kctx="kubectx"
+alias dc="docker compose"
 
 function fix-macos-zsh-config() {
   echo "Patching default prompt in /etc/zshrc"
