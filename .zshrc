@@ -59,9 +59,31 @@ function awsall {
 }
 
 function node-sh() {
-  docker run --rm -it -v "$(pwd):/app" -w /app "node:${1:-latest}" bash
+  local TAG=latest
+
+  while getopts ":v:" OPTION; do
+    case "$OPTION" in
+      v)
+	TAG="$OPTARG"
+	shift "$(($OPTIND - 1))"
+	;;
+    esac
+  done
+
+  docker run --rm -it -v "$(pwd):/app" -w "/app" "node:$TAG" ${@:-bash} 
 }
 
 function php-sh() {
-  docker run --rm -it -v "$(pwd):/app" -w /app "composer:${1:-latest}" bash
+  local TAG=latest
+
+  while getopts ":v:" OPTION; do
+    case "$OPTION" in
+      v)
+        TAG="$OPTARG"
+	shift "$(($OPTIND - 1))"
+	;;
+    esac
+  done
+
+  docker run --rm -it -v "$(pwd):/app" -w /app "composer:$TAG" ${@:-bash}
 }
