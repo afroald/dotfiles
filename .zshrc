@@ -73,6 +73,8 @@ function node-sh() {
   docker run --rm -it -v "$(pwd):/app" -w "/app" "node:$TAG" ${@:-bash} 
 }
 
+alias ns="node-sh"
+
 function php-sh() {
   local TAG=latest
 
@@ -87,3 +89,5 @@ function php-sh() {
 
   docker run --rm -it -v "$(pwd):/app" -w /app "composer:$TAG" ${@:-bash}
 }
+
+alias ps="php-sh"
