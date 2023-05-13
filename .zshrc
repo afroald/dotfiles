@@ -60,34 +60,44 @@ function awsall {
 
 function node-sh() {
   local TAG=latest
+  local PORTS=()
 
-  while getopts ":v:" OPTION; do
+  while getopts ":p:v:" OPTION; do
     case "$OPTION" in
+      p)
+	PORTS+=(-p "$OPTARG")
+	;;
       v)
 	TAG="$OPTARG"
-	shift "$(($OPTIND - 1))"
 	;;
     esac
   done
 
-  docker run --rm -it -v "$(pwd):/app" -w "/app" "node:$TAG" ${@:-bash} 
+  shift $((OPTIND - 1))
+
+  docker run --rm -it --pull always "${PORTS[@]}" -v "$(pwd):/app" -w "/app" "node:$TAG" ${@:-bash} 
 }
 
 alias ns="node-sh"
 
 function php-sh() {
   local TAG=latest
+  local PORTS=()
 
-  while getopts ":v:" OPTION; do
+  while getopts ":p:v:" OPTION; do
     case "$OPTION" in
+      p)
+	PORTS+=(-p "$OPTARG")
+	;;
       v)
         TAG="$OPTARG"
-	shift "$(($OPTIND - 1))"
 	;;
     esac
   done
 
-  docker run --rm -it -v "$(pwd):/app" -w /app "composer:$TAG" ${@:-bash}
+  shift $((OPTIND - 1))
+
+  docker run --rm -it --pull always "${PORTS[@]}" -v "$(pwd):/app" -w /app "composer:$TAG" ${@:-bash}
 }
 
 alias ps="php-sh"
