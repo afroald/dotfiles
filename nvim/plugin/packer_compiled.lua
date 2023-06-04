@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/roald/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lightline.vim"] = {
+    loaded = true,
+    path = "/Users/roald/.local/share/nvim/site/pack/packer/start/lightline.vim",
+    url = "https://github.com/itchyny/lightline.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/roald/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -171,6 +176,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/roald/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/roald/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vscode.nvim"] = {
     loaded = true,
