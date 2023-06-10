@@ -59,7 +59,7 @@ function awsall {
 }
 
 function node-sh() {
-  local TAG=latest
+  local TAG="20.2-bullseye-slim"
   local PORTS=()
 
   while getopts ":p:v:" OPTION; do
@@ -75,7 +75,7 @@ function node-sh() {
 
   shift $((OPTIND - 1))
 
-  docker run --rm -it --pull always "${PORTS[@]}" -v "$(pwd):/app" -w "/app" "node:$TAG" ${@:-bash} 
+  docker run --rm -it --pull always --ulimit nofile=5000:5000 "${PORTS[@]}" -v "$(pwd):/app" -w "/app" "node:$TAG" ${@:-bash} 
 }
 
 alias ns="node-sh"
