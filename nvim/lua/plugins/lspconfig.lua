@@ -14,6 +14,15 @@ return {
           },
         },
       },
+      setup = {
+        eslint = function()
+          require("lazyvim.util").on_attach(function(client)
+            if client.name == "eslint" then
+              client.server_capabilities.documentFormattingProvider = true
+            end
+          end)
+        end,
+      },
     },
   },
 }
