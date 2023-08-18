@@ -28,6 +28,7 @@ alias kns="kubens"
 alias kctx="kubectx"
 alias dc="docker compose"
 
+# macOS stuff
 function fix-macos-zsh-config() {
   echo "Patching default prompt in /etc/zshrc"
   sudo sed -i .original "s/^PS1=/# PS1=/" /etc/zshrc
@@ -37,6 +38,12 @@ function fix-macos-zsh-config() {
     echo "Moving /etc/zprofile to /etc/zshenv"
     sudo mv /etc/zprofile /etc/zshenv
   fi
+}
+
+# Load ssh keys from keychain in background
+() {
+  setopt LOCAL_OPTIONS NO_MONITOR
+  ssh-add --apple-load-keychain &> /dev/null & disown
 }
 
 export PURE_PROMPT_SYMBOL="(づ￣ ³￣)づ"
