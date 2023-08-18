@@ -1,6 +1,6 @@
 local util = require("lspconfig.util")
 
-local function organize_imports()
+local function organise_imports()
   vim.lsp.buf.execute_command({
     command = "_typescript.organizeImports",
     arguments = { vim.api.nvim_buf_get_name(0) },
@@ -28,23 +28,17 @@ return {
         },
         tsserver = {
           commands = {
+            OrganiseImports = {
+              organise_imports,
+              description = "Organise Imports",
+            },
             OrganizeImports = {
-              organize_imports,
-              description = "Organize Imports",
+              organise_imports,
+              description = "Organise Imports",
             },
           },
         },
       },
-    },
-    setup = {
-      tsserver = function()
-        commands = {
-          OrganizeImports = {
-            organize_imports,
-            description = "Organize Imports",
-          },
-        }
-      end,
     },
   },
 }
