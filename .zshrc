@@ -14,7 +14,11 @@ fi
 
 # Nifty stuff
 source "$HOME/.dotfiles/convert-webfont.sh"
-eval "$(jump shell)"
+
+if (( $+commands[jump] ));
+then
+  eval "$(jump shell)"
+fi
 
 # Optimizing my shell game
 alias ls="exa"
