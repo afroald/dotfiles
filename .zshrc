@@ -21,9 +21,9 @@ then
 fi
 
 # Optimizing my shell game
-alias ls="exa"
-alias ll="exa -l"
-alias lla="exa -la"
+alias ls="eza"
+alias ll="eza -l"
+alias lla="eza -la"
 alias current-branch="git rev-parse --abbrev-ref HEAD"
 
 # k8s stuff
