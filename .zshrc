@@ -50,7 +50,7 @@ function fix-macos-zsh-config() {
   ssh-add --apple-load-keychain &> /dev/null & disown
 }
 
-export PURE_PROMPT_SYMBOL="(づ￣ ³￣)づ"
+export PURE_PROMPT_SYMBOL="(づ￣ ³￣)づ"
 
 function awsall {
   export AWS_PAGER=""
