@@ -44,6 +44,11 @@ function fix-macos-zsh-config() {
   fi
 }
 
+function flush-dns-cache() {
+  sudo dscacheutil -flushcache
+  sudo killall -HUP mDNSResponder
+}
+
 # Load ssh keys from keychain in background
 () {
   setopt LOCAL_OPTIONS NO_MONITOR
