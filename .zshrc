@@ -20,6 +20,11 @@ then
   eval "$(jump shell)"
 fi
 
+if (( $+commands[fnm] ));
+then
+  eval "$(fnm env --use-on-cd)"
+fi
+
 # Optimizing my shell game
 alias ls="eza"
 alias ll="eza -l"
