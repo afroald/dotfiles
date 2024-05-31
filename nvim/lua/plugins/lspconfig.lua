@@ -5,6 +5,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        vtsls = {
+          root_dir = util.find_git_ancestor,
+        },
         eslint = {
           root_dir = util.find_git_ancestor,
           settings = {
