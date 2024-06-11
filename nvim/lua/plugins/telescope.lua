@@ -11,7 +11,7 @@ return {
       end,
     },
     keys = {
-      { "<leader><space>", util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+      { "<leader><space>", util.pick("files", { cwd = nil }), desc = "Find Files (cwd)" },
     },
   },
 }
