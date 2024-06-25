@@ -1,11 +1,14 @@
 [window]
 dimensions = { columns = 160, lines = 50 }
+opacity = 0.95
+blur = true
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 
 [colors]
 draw_bold_text_with_bright_colors = true
+transparent_background_colors = true
 
 # colors from: https://github.com/alebelcor/alacritty-snazzy/tree/master
 primary = { foreground = "#eff0eb", background = "#282a36" }
