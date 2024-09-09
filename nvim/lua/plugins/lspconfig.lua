@@ -16,11 +16,11 @@ return {
             },
           },
         },
-        intelephense = {
-          init_options = {
-            licenceKey = "/Users/roald/.dotfiles/intelephense-license.txt",
-          },
-        },
+        -- intelephense = {
+        --   init_options = {
+        --     licenceKey = "/Users/roald/.dotfiles/intelephense-license.txt",
+        --   },
+        -- },
       },
     },
   },
