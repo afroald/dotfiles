@@ -2,6 +2,7 @@
 dimensions = { columns = 160, lines = 50 }
 opacity = 0.95
 blur = true
+padding = { x = 2, y = 2 }
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
