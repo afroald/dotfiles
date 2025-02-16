@@ -25,3 +25,10 @@ fi
 # Set nvim as default editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+# ESP Rust toolchain
+export ESPUP_EXPORT_FILE=~/.dotfiles/export-esp.sh
+
+if [ -f "$HOME/.dotfiles/export-esp.sh" ]; then
+  . "$HOME/.dotfiles/export-esp.sh"
+fi
