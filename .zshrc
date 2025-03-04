@@ -13,16 +13,9 @@ if [ -f ~/.dotfiles/secrets.zsh ]; then
 fi
 
 # Nifty stuff
-source "$HOME/.dotfiles/convert-webfont.sh"
-
 if (( $+commands[jump] ));
 then
   eval "$(jump shell)"
-fi
-
-if (( $+commands[fnm] ));
-then
-  eval "$(fnm env --use-on-cd)"
 fi
 
 # Optimizing my shell game
@@ -62,24 +55,7 @@ function flush-dns-cache() {
 
 export PURE_PROMPT_SYMBOL="(づ￣ ³￣)づ"
 
-function awsall {
-  export AWS_PAGER=""
-  for i in `aws ec2 --region us-east-1 describe-regions --query "Regions[].{Name:RegionName}" --output text|sort -r`
-  do
-  echo "------"
-  echo $i
-  echo "------"
-  echo -e "\n"
-  if [ `echo "$@"|grep -i '\-\-region'|wc -l` -eq 1 ]
-  then
-      echo "You cannot use --region flag while using awsall"
-      break
-  fi
-  aws $@ --region $i
-  done
-  trap "break" INT TERM
-}
-
+# Completions
 FPATH="$HOME/.dotfiles/zsh-completions:$FPATH"
 autoload -Uz compinit
 compinit
