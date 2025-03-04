@@ -80,3 +80,6 @@ function awsall {
   trap "break" INT TERM
 }
 
+FPATH="$HOME/.dotfiles/zsh-completions:$FPATH"
+autoload -Uz compinit
+compinit

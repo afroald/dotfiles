@@ -2,8 +2,10 @@
     name = Roald Hacquebord
     email = roald@zielma.kr
     signingkey = 4DD2950F
+
 [color]
     ui = true
+
 [core]
     excludesfile = /Users/roald/.global_ignore
     ignorecase = false
@@ -11,26 +13,32 @@
     # To prevent rebase problems on Mac OS X
     # http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
     trustctime = false
+
 [push]
     default = simple
+
 [alias]
     lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset'
+
 [filter "lfs"]
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
+
 [commit]
     gpgsign = true
+
 [pull]
     ff = only
+
 [init]
     defaultBranch = main
 
-[includeIf "gitdir:~/Development/nos/"]
-    path = ~/Development/nos/.gitconfig
+[includeIf "gitdir:~/Development/probo/"]
+    path = ~/Development/probo/.gitconfig
 
 [gpg "ssh"]
     allowedSignersFile = /Users/roald/.ssh/allowed_signers
