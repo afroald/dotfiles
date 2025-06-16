@@ -11,6 +11,7 @@ fi
 
 # Load antigen
 # shellcheck source=antigen/antigen.zsh
+zstyle ':omz:update' mode disabled
 source "$HOME/.dotfiles/antigen/antigen.zsh"
 antigen init "$HOME/.dotfiles/.antigenrc"
 
