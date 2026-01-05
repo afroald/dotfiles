@@ -40,9 +40,6 @@
 [init]
   defaultBranch = main
 
-[includeIf "gitdir:~/Development/probo/"]
-  path = ~/Development/probo/.gitconfig
-
 [gpg "ssh"]
   allowedSignersFile = ~/.ssh/allowed_signers
 
@@ -69,6 +66,7 @@
 
 [rebase]
 	updateRefs = true
+
 [lfs "customtransfer.xet"]
 	path = git-xet
 	args = transfer
